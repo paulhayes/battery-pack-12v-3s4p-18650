@@ -1,4 +1,4 @@
-use <libraries/utils.scad>;
+use <utils.scad>;
 
 h=110;
 w=72;
@@ -160,10 +160,10 @@ module middle(){
     translate([-w/2,-d/2,t]) board_pillars();
 }
 
-//box();
-translate([0,0,0]) middle();
-//translate([0,0,h+mid_h+20]) lidTop();
+color([1,1,1]) box();
+color([0.1,0.1,0.1]) translate([0,0,h]) middle();
+color([1,1,1]) translate([0,0,h+mid_h+t]) lidTop();
 
 //charging_board();
 //translate([0,0,mid_h]) lidTopTop();
-//lidBottom();
+color([0.1,0.1,0.1]) lidBottom();
